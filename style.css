@@ -163,6 +163,11 @@ h3:hover::after {
     animation-duration: 1s;
 }
 
+.right a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
 @keyframes line {
     0% {
         width: 0;
@@ -201,7 +206,7 @@ footer p {
 
 .page2 {
     /* margin-top: 5vh; */
-    height: 140vh;
+    height: 100vh;
     width: 100%;
 }
 
@@ -243,10 +248,14 @@ footer p {
 }
 
 .photography {
-    height: 100vh;
+    height: 80vh;
     width: 100%;
 }
 
+.photography h2 {
+    font-size: 6vh;
+    font-family: outfit;
+}
 
 .box-container {
     display: flex;
@@ -347,10 +356,106 @@ footer p {
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
 }
 
+.page8 h2 {
+    width: 300%;
+    font-size: 40vw;
+    /* overflow-x: hidden; */
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    word-wrap: normal;
 
-.footer {
-    height: 30vh;
-    width: 100%;
-    background-color: var(--color-secondary);
-    border-radius: 50px 50px 0 0;
+}
+
+.page9 h2 {
+    width: 298%;
+    font-size: 40vw;
+    /* overflow-x: hidden; */
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    word-wrap: normal;
+}
+
+.highlights {
+    text-align: center;
+    font-size: 10vh;
+    font-family: outfit;
+    font-weight: 300;
+
+}
+
+.high {
+    /* margin-left: 40%;
+     */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h {
+    transform: translate(20px, 85px) rotate(-30deg);
+}
+
+.i {
+    transform: translate(19.71px, 83.57px) rotate(-28.5deg);
+}
+
+.g {
+    transform: translate(19.41px, 82.15px) rotate(-27deg);
+}
+
+.h {
+    transform: translate(19.11px, 80.73px) rotate(-25.5deg);
+}
+
+.l {
+    transform: translate(18.81px, 79.32px) rotate(-24deg);
+}
+
+.i {
+    transform: translate(18.51px, 77.92px) rotate(-22.5deg);
+}
+
+.g {
+    transform: translate(18.2px, 76.52px) rotate(-21deg);
+}
+
+.h {
+    transform: translate(17.89px, 75.14px) rotate(-19.5deg);
+}
+
+.t {
+    transform: translate(17.58px, 73.75px) rotate(-18deg);
+}
+
+.s {
+    transform: translate(17.26px, 72.38px) rotate(-16.5deg);
+}
+
+.l {
+    transform: translate(16.94px, 71px) rotate(-15deg);
+}
+
+.i {
+    transform: translate(16.62px, 69.63px) rotate(-13.5deg);
+}
+
+.g {
+    transform: translate(16.29px, 68.27px) rotate(-12deg);
+}
+
+.h {
+    transform: translate(15.96px, 66.91px) rotate(-10.5deg);
+}
+
+.t {
+    transform: translate(15.62px, 65.56px) rotate(-9deg);
+}
+
+.s {
+    transform: translate(15.28px, 64.21px) rotate(-7.5deg);
+}
+
+.photography span {
+    display: inline-block;
+
 }

@@ -43,12 +43,35 @@ gsap.to(".page2 h2", {
         // markers:true,
         start:"top 0%",
         end:"top -100%",
-        scrub:3,
+        scrub:2,
         pin:true
     }
 })
 
+gsap.to(".page8 h2", {
+    transform:"translateX(-150%)",
+    scrollTrigger:{
+        trigger:".page8",
+        scroller: "body",
+        
+        start:"top 0%",
+        end:"top -150%",
+        scrub:2,
+        pin:true
+    }
+})
 
+gsap.to(".page9 h2", {
+    transform:"translateX(-150%)",
+    scrollTrigger:{
+        trigger:".page9",
+        scroller: "body",
+        start:"top 0%",
+        end:"top -150%",
+        scrub:2,
+        pin:true
+    }
+})
 
 
 

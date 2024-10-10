@@ -185,21 +185,6 @@ h3:hover::after {
     }
 }
 
-footer {
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-}
-
-footer p {
-    font-size: 3vh;
-    font-family: outfit;
-}
 
 
 
@@ -241,10 +226,10 @@ footer p {
 }
 
 .heading-2 {
-    margin-top: 5%;
+    margin-top: 2%;
     font-size: 6vh;
     width: fit-content;
-    margin-left: 35%;
+    margin-bottom: 2%;
 }
 
 .photography {
@@ -515,4 +500,50 @@ footer p {
     font-size: 30px;
     color: #fff;
     cursor: pointer;
+}
+
+
+/* style.css */
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* Adjust as needed */
+    align-items: center;
+    padding: 20vh 0;
+    /* Adjust as needed */
+    text-align: center;
+    color: white;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1A1A1A;
+    padding: 12px;
+    /* Adjust as needed */
+    border-radius: 10px;
+    /* Adjust as needed */
+    position: sticky;
+    top: 10vh;
+    /* Adjust as needed */
+    height: 95vh;
+    /* Adjust as needed */
+    width: 95vw;
+    /* Adjust as needed */
+    max-width: 1400px;
+    /* Adjust as needed */
+}
+
+.heading-2 {
+    font-size: 2rem;
+    /* Adjust as needed */
+    font-weight: bold;
+}
+
+.card iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }

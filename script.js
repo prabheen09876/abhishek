@@ -1,40 +1,6 @@
-const typetext = document.querySelector(".typed-text")
-const cursor = document.querySelector(".cursor")
-const words = ["coding ", "photography ", "editing "]
-const typingdelay = 100
-const erasingdelay = 50
-const newletterdelay = 500
-let index = 0;
-let charindex = 0
 
-document.addEventListener("DOMContentLoaded", () => {
-  if (words.length) {
-    setTimeout(type, newletterdelay);
-  }
-});
 
-function type() {
-  if (charindex < words[index].length) {
-    typetext.textContent += words[index].charAt(charindex)
-    charindex++
-    setTimeout(type, typingdelay)
-  } else {
-    setTimeout(erase, newletterdelay)
-  }
-}
-function erase() {
-  if (charindex > 0) {
-    typetext.textContent = words[index].substring(0, charindex - 1)
-    charindex--
-    setTimeout(erase, erasingdelay)
-  } else {
-    index++;
-    if (index >= words.length) {
-      index = 0
-    }
-    setTimeout(type, typingdelay + 100)
-  }
-}
+// GSAP animations for scrolling effects
 gsap.to(".page2 h2", {
   transform: "translateX(-150%)",
   scrollTrigger: {
@@ -73,9 +39,7 @@ gsap.to(".page9 h2", {
   }
 })
 
-
-
-
+// Function to animate cards on scroll
 const boxes = document.querySelectorAll(".box");
 let activeIndex = 1;
 let isTransitioning = false;
@@ -94,6 +58,7 @@ function updateCurrentImg() {
   }, 500);
 }
 
+// Function to handle arrow key presses for box navigation
 function handleArrowKey(event) {
   if (isTransitioning) {
     return;
@@ -108,6 +73,7 @@ function handleArrowKey(event) {
   updateCurrentImg();
 }
 
+// Function to handle box clicks for navigation
 function handleBoxClick(index) {
   if (isTransitioning) {
     return;
@@ -122,15 +88,42 @@ function handleBoxClick(index) {
   }
 }
 
+// Event listener for arrow key presses
 document.addEventListener("keydown", handleArrowKey);
 
+// Initial call to updateCurrentImg to set the first box as active
 updateCurrentImg();
 
+// Event listeners for box clicks
 boxes.forEach((box, index) => {
   box.addEventListener("click", () => handleBoxClick(index));
 });
 
+// Function to animate cards on scroll
+function animateCards(cards) {
+  cards.forEach((card, index) => {
+    gsap.to(card, {
+      scale: 0.6,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: card,
+        start: 'top 15%',
+        end: 'bottom 15%',
+        scrub: true,
+        onEnter: () => {
+          if (index > 0) {
+            gsap.to(window, { duration: 0.5, scrollTo: card });
+          }
+        },
+      },
+    });
+  });
+}
 
+// Array of card selectors
+const cards = ['.card1', '.card2', '.card3', '.card4', '.card5'];
+// Call to animateCards function
+animateCards(cards);
 
 
 
@@ -154,3 +147,20 @@ function closeFullPhoto() {
   // Hide the full photo overlay when the close button is clicked
   fullPhotoOverlay.style.display = 'none';
 }
+
+
+
+
+
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)

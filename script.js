@@ -107,9 +107,10 @@ function animateCards(cards) {
       opacity: 0,
       scrollTrigger: {
         trigger: card,
-        start: 'top 15%',
-        end: 'bottom 15%',
+        start: 'top -10%',
+        end: 'bottom 1%',
         scrub: true,
+        markers: true,
         onEnter: () => {
           if (index > 0) {
             gsap.to(window, { duration: 0.5, scrollTo: card });

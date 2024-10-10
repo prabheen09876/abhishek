@@ -520,7 +520,7 @@ h3:hover::after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #1A1A1A;
+    background-color: #373A40;
     padding: 12px;
     /* Adjust as needed */
     border-radius: 10px;
@@ -528,9 +528,9 @@ h3:hover::after {
     position: sticky;
     top: 10vh;
     /* Adjust as needed */
-    height: 95vh;
+    height: 100vh;
     /* Adjust as needed */
-    width: 95vw;
+    width: 100vw;
     /* Adjust as needed */
     max-width: 1400px;
     /* Adjust as needed */
